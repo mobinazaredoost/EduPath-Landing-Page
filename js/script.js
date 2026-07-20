@@ -49,6 +49,49 @@ revealElements.forEach(el=>{
     revealObserver.observe(el);
 });
 
+// START COUNTER ANIMATION
+
+const counters =
+document.querySelectorAll(".stat h2");
+let started = false;
+
+const counterObserver =
+new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting && !started){
+            counters.forEach(counter=>{
+                let target =
+                +counter.innerText.replace(/\D/g,'');
+                let current = 0;
+                let increment =
+                target / 100;
+                let timer =
+                setInterval(()=>{
+                    current += increment;
+                    if(current >= target){
+                        counter.innerText =
+                        counter.innerText.includes("%")
+                        ? target+"%"
+                        : target+"+";
+                        clearInterval(timer);
+                    }
+                    else{
+                        counter.innerText =
+                        Math.floor(current);
+                    }},20);
+            });
+            started=true;
+        }
+    });
+});
+
+counterObserver.observe(
+document.querySelector(".stats")
+);
+
+// SMOOTH SCROLL=اسکرول روان 
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+    anchor.addEventListener("click",function(e){
         const target =
         document.querySelector(
         this.getAttribute("href")
