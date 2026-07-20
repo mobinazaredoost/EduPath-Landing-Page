@@ -1,3 +1,7 @@
+/* start normalization */
+:root{
+    --primary:#6D28D9;
+    --secondary:#EC4899;
     --accent:#60A5FA;
     --dark:#0F172A;
     --text:#475569;
@@ -317,3 +321,410 @@ section{
     color:var(--dark);
 }
 
+/*start STATS*/
+
+.stats{
+    padding-top:30px;
+}
+
+.stats .container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:28px;
+}
+
+.stat{
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(124,58,237,.08);
+    border-radius:24px;
+    padding:40px 20px;
+    text-align:center;
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.stat::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:4px;
+background:linear-gradient(90deg,#7C3AED,#EC4899);}
+
+.stat:hover{
+transform:translateY(-5px);
+box-shadow:0 25px 45px rgba(124,58,237,.12);}
+
+.stat h2{
+font-size:52px;
+font-weight:900;
+background:linear-gradient(135deg,#7C3AED,#EC4899);
+-webkit-background-clip:text;
+color:transparent;
+margin-bottom:12px;}
+
+.stat span{
+font-size:17px;
+font-weight:600;
+color:#64748B;
+}
+/* start TESTIMONIAL*/
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+.review{
+    background:white;
+    padding:35px;
+    border-radius:24px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.06);
+    transition:.35s;
+}
+.review:hover{
+    transform:translateY(-6px);
+}
+.review img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:auto;
+    margin-bottom:20px;
+    border:4px solid #E9D5FF;
+}
+
+.review h3{
+    color:var(--dark);
+    margin-bottom:15px;
+}
+.review p{
+    line-height:2;
+}
+.reviews-more{
+margin-top:35px;
+display:flex;
+justify-content:center;
+}
+
+.reviews-more a{
+display:flex;
+align-items:center;
+gap:14px;
+padding:14px 28px;
+border:1px solid #E5E7EB;
+border-radius:50px;
+background:#fff;
+color:#7C3AED;
+font-weight:700;
+transition:.35s;
+box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+.reviews-more a:hover{
+transform:translateY(-3px);
+border-color:#bc9cf3;
+box-shadow:0 18px 35px rgba(124,58,237,.15);
+}
+
+.reviews-more span{
+font-size:22px;
+}
+/* end TESTIMONIAL */
+
+/*start  CTA*/
+
+.cta{
+padding:120px 0;
+background:#FCFBFF;}
+
+.cta .container{
+background:linear-gradient(135deg,#7C3AED,#9333EA,#EC4899);
+border-radius:35px;
+padding:80px 60px;
+text-align:center;
+position:relative;
+overflow:hidden;
+box-shadow:0 30px 60px rgba(124,58,237,.18);
+}
+
+.cta .container::before{
+content:"";
+position:absolute;
+width:350px;
+height:350px;
+background:rgba(255,255,255,.15);
+border-radius:50%;
+top:-180px;
+right:-120px;
+}
+
+.cta .container::after{
+content:"";
+position:absolute;
+width:250px;
+height:250px;
+background:rgba(255,255,255,.08);
+border-radius:50%;
+bottom:-120px;
+left:-80px;
+}
+
+.cta h2{
+position:relative;
+z-index:2;
+font-size:46px;
+font-weight:900;
+color:white;
+margin-bottom:35px;
+}
+
+.cta .btn{
+position:relative;
+z-index:2;
+background:white;
+color:#7C3AED;
+padding:18px 45px;
+border-radius:60px;
+font-size:18px;
+font-weight:800;
+transition:.35s;
+}
+
+.cta .btn:hover{
+transform:translateY(-5px);
+box-shadow:0 18px 40px rgba(255,255,255,.25);
+}
+
+/* start FOOTER */
+
+footer{
+    background:#0F172A;
+    color:#CBD5E1;
+    padding-top:70px;
+}
+footer .container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:50px;
+}
+footer h3,
+footer h4{
+    color:white;
+    margin-bottom:20px;
+}
+footer p{
+    line-height:2;
+}
+/* ICONS ha*/
+
+.socials ul{
+display:flex;
+align-items:center;
+gap:18px;
+padding:0;
+margin-top:20px;
+list-style:none;
+}
+
+.socials a{
+text-decoration:none;
+}
+
+.socials i{
+width:45px;
+height:45px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:18px;
+font-size:30px;
+background:#fff;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.45s;
+cursor:pointer;
+}
+.telegram-icon{
+color:#5774E9;
+}
+
+.telegram-icon:hover{
+background:#5774E9;
+color:#fff;
+transform:rotate(360deg) scale(1.1);
+box-shadow:0 15px 35px rgba(87,116,233,.45);
+}
+/* start icon Instagram */
+.instagram-icon{
+color:#D80D43;
+}
+
+.instagram-icon:hover{
+background:#D80D43;
+color:#fff;
+transform:rotate(360deg) scale(1.1);
+box-shadow:0 15px 35px rgba(216,13,67,.45);
+}
+
+/* start Linkedin */
+
+.linkedin-icon{
+color:#2D1FC7;
+}
+
+.linkedin-icon:hover{
+background:#2D1FC7;
+color:#fff;
+transform:rotate(360deg) scale(1.1);
+box-shadow:0 15px 35px rgba(45,31,199,.45);
+}
+
+/* start WhatsApp */
+.whatsapp-icon{
+color:#158836;
+}
+
+.whatsapp-icon:hover{
+background:#158836;
+color:#fff;
+transform:rotate(360deg) scale(1.1);
+box-shadow:0 15px 35px rgba(21,136,54,.45);
+}
+
+/*start icon Github */
+
+.github-icon{
+color:#111827;
+}
+
+.github-icon:hover{
+background:#111827;
+color:#fff;
+transform:rotate(360deg) scale(1.1);
+box-shadow:0 15px 35px rgba(0,0,0,.45);}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.08);
+    margin-top:60px;
+    text-align:center;
+    padding:25px;
+    color:#94A3B8;
+}
+/* end footer */
+
+/*start responsive*/
+
+@media(max-width:992px){
+.hero h1{
+    font-size:56px;
+}
+.section-title h2{
+    font-size:34px;
+}
+.cta h2{
+    font-size:34px;
+}}
+
+@media(max-width:768px){
+header{
+    top:10px;
+}
+header .container{
+    padding:15px 20px;
+}
+.nav-links{
+    display:none;
+}
+.menu-btn{
+    display:block;
+}
+.hero{
+    padding-top:150px;
+}
+.hero h1{
+    font-size:42px;
+}
+.hero p{
+    font-size:17px;
+}
+.btn{
+    width:100%;
+    text-align:center;
+}
+.badge{
+    font-size:14px;
+}
+.section-title h2{
+    font-size:30px;
+}
+.stat h2{
+    font-size:42px;
+}
+.cta h2{
+    font-size:30px;
+}}
+
+@media(max-width:500px){
+.hero h1{
+    font-size:34px;
+}
+.logo{
+    font-size:24px;
+}
+.logo i{
+    width:45px;
+    height:45px;
+    font-size:20px;
+}
+.card,
+.feature,
+.review{
+    padding:28px;
+}}
+
+
+
+/* برای کارکردن انیمیشن های جاوا */
+
+.hidden{
+opacity:0;
+transform:translateY(50px);
+transition:.8s;
+}
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:768px){
+.nav-links{
+position:absolute;
+top:90px;
+right:0;
+width:100%;
+background:white;
+border-radius:20px;
+padding:25px;
+display:flex;
+flex-direction:column;
+box-shadow:0 20px 40px rgba(0,0,0,.1);
+opacity:0;
+pointer-events:none;
+transform:translateY(-20px);
+transition:.35s;}
+
+.nav-links.active{
+opacity:1;
+pointer-events:auto;
+transform:translateY(0);
+}
+}
+header.scrolled .container{
+background:white;
+box-shadow:
+0 20px 40px rgba(0,0,0,.12);
+}
