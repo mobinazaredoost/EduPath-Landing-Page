@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود | EduPath</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Auth CSS -->
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+<div class="auth-container">
+    <div class="auth-banner">
+        <a href="index.html" class="auth-logo">
+            <i class="fa-solid fa-graduation-cap"></i>EduPath
+        </a>
+        <div class="banner-content">
+            <h1>
+                آینده تحصیلی خودت را
+                <span>هوشمندانه بساز.</span>
+            </h1>
+            <p>
+                با EduPath همراه شو و با برنامه‌ریزی درست،
+                به اهداف تحصیلی خودت نزدیک‌تر شو.
+            </p>
+            <div class="banner-icon">
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+        </div>
+    </div>
+    <!-- RIGHT SIDE -->
+    <div class="auth-box">
+        <a href="index.html" class="back-home">
+            <i class="fa-solid fa-arrow-right"></i>
+            بازگشت
+        </a>
+        <div class="form-header">
+            <h2>
+                وارد حساب کاربری خود شوید
+            </h2>
+        </div>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <label>
+                    ایمیل
+                </label>
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input 
+                    type="email"
+                    id="email"
+                    placeholder="example@gmail.com">
+                </div>
+            </div>
+            <div class="input-group">
+                <label>
+                    رمز عبور
+                </label>
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input 
+                    type="password"
+                    id="password"
+                    placeholder="رمز عبور">
+                    <i class="fa-solid fa-eye toggle-password"></i>
+                </div>
+            </div>
+
+            <div class="form-options">
+                <label class="remember">
+                    <input type="checkbox">
+                    مرا به خاطر بسپار
+                </label>
+                <a href="#">
+                    فراموشی رمز عبور؟
+                </a>
+            </div>
+            <button class="auth-btn">
+                ورود به حساب
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <div class="switch-page">
+                حساب کاربری ندارید؟
+                <a href="register.html">
+                    ثبت نام کنید
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="js/auth.js"></script>
+</body>
+</html>
