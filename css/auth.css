@@ -248,3 +248,65 @@ body{
     cursor:pointer;
     background:linear-gradient(135deg,#7C3AED,#EC4899);
     color:white;
+    font-family:inherit;
+    font-size:17px;
+    font-weight:800;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    transition:.35s;
+    box-shadow:0 20px 35px rgba(124,58,237,.25);
+}
+
+.auth-btn:hover{
+    transform:translateY(-5px);
+}
+.switch-page{
+    text-align:center;
+    margin-top:30px;
+    color:#64748B;
+}
+.switch-page a{
+    color:#7C3AED;
+    font-weight:800;
+}
+.auth-message{
+    margin-top:20px;
+    padding:15px;
+    border-radius:15px;
+    text-align:center;
+    font-weight:700;
+    animation:show .3s ease;
+}
+.auth-message.error{
+    background:#FEE2E2;
+    color:#DC2626;
+}
+.auth-message.success{
+    background:#DCFCE7;
+    color:#16A34A;
+}
+
+/*START RESPONSIVE*/
+@media(max-width:900px){
+.auth-container{
+    grid-template-columns:1fr;
+    margin:20px auto;
+}
+.auth-banner{
+    display:none;
+}
+.auth-box{
+    padding:35px 25px;
+}
+.form-header h2{
+    font-size:30px;
+}}
+
+@media(max-width:450px){
+.form-options{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+}}
