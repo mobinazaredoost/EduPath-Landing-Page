@@ -1,5 +1,17 @@
+// START SHOW / HIDE PASSWORD
+document.querySelectorAll(".toggle-password, .toggle-confirm").forEach(icon => {
+    icon.addEventListener("click", () => {
+        const input = icon.previousElementSibling;
+        if (input.type === "password") {
+            input.type = "text";
+            icon.classList.replace("fa-eye", "fa-eye-slash");
+        } else {
+            input.type = "password";
+            icon.classList.replace("fa-eye-slash", "fa-eye");
         }
     });
+});
+
 // LOGIN VALIDATION
 const loginForm = document.querySelector("#loginForm");
 if(loginForm){
