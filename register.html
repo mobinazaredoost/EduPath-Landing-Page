@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام | EduPath</title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+<div class="auth-container">
+    <div class="auth-banner">
+        <a href="index.html" class="auth-logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            EduPath
+        </a>
+        <div class="banner-content">
+            <h1>
+                آینده تحصیلی خودت را
+                <span>هوشمندانه بساز.</span>
+            </h1>
+            <p>
+                فقط چند قدم تا شروع مسیر موفقیت فاصله داری.
+            </p>
+            <div class="banner-icon">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+        </div>
+    </div>
+    <div class="auth-box">
+        <a href="index.html" class="back-home">
+            <i class="fa-solid fa-arrow-right"></i>
+            بازگشت
+        </a>
+        <div class="form-header">
+            <h2>
+                ایجاد حساب کاربری ✨
+            </h2>
+            <p>
+                اطلاعات خود را وارد کنید.
+            </p>
+        </div>
+        <form id="registerForm">
+            <div class="input-group">
+                <label>نام و نام خانوادگی</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-user"></i>
+                    <input
+                        type="text"
+                        id="fullname"
+                        placeholder="نام و نام خانوادگی">
+                </div>
+            </div>
+            <div class="input-group">
+                <label>ایمیل</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="example@gmail.com">
+                </div>
+            </div>
+            <div class="input-group">
+                <label>شماره موبایل</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-phone"></i>
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="09xxxxxxxxx">
+                </div>
+            </div>
+            <!--start PASSWORD -->
+            <div class="input-group">
+                <label>رمز عبور</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="رمز عبور">
+                    <i class="fa-solid fa-eye toggle-password"></i>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>تکرار رمز عبور</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="تکرار رمز عبور">
+                    <i class="fa-solid fa-eye toggle-confirm"></i>
+                </div>
+            </div>
+            <div class="form-options">
+                <label class="remember">
+                    <input type="checkbox" id="terms">
+                    قوانین سایت را می‌پذیرم.
+
+                </label>
+            </div>
+            <button class="auth-btn" type="submit">
+                ایجاد حساب
+                <i class="fa-solid fa-user-plus"></i>
+            </button>
+            <div class="switch-page">
+                قبلاً ثبت نام کرده‌اید؟
+                <a href="login.html">
+                    ورود
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="js/auth.js"></script>
+</body>
+</html>
