@@ -33,10 +33,22 @@ loginForm.addEventListener("submit",(e)=>{
         );
         return;
     }
-    showMessage(
-        "ورود با موفقیت انجام شد",
-        "success"
-    );
+   showMessage(
+    "ورود با موفقیت انجام شد",
+    "success"
+);
+localStorage.setItem(
+    "userLogin",
+    "true"
+);
+localStorage.setItem(
+    "userEmail",
+    email
+);
+
+setTimeout(()=>{
+    window.location.href="dashboard.html";
+},1500);
 });
 }
 // MESSAGE FUNCTION
@@ -85,6 +97,82 @@ if(!terms){
 showMessage("لطفاً قوانین سایت را بپذیرید.","error");
 return;
 }
-showMessage("ثبت نام با موفقیت انجام شد.","success");
+showMessage(
+"ثبت نام با موفقیت انجام شد.",
+"success"
+);
+
+localStorage.setItem(
+"userName",
+fullname
+);
+localStorage.setItem(
+"userEmail",
+email
+);
+localStorage.setItem(
+"userPhone",
+phone
+);
+setTimeout(()=>{
+window.location.href="login.html";
+},1500);
 });
 }
+
+
+
+
+// HEADER LOGIN STATE
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+const headerActions =
+document.querySelector(".header-actions");
+if(headerActions){
+const login =
+localStorage.getItem("userLogin");
+if(login==="true"){
+const name =
+localStorage.getItem("userName")
+||
+"کاربر";
+headerActions.innerHTML=`
+<a href="dashboard.html"
+class="login-btn">
+<i class="fa-solid fa-user"></i>
+${name}
+</a>
+|
+<a href="#"
+onclick="logout()"
+class="register-btn">
+خروج
+</a>`;
+
+}
+}
+});
+function logout(){
+localStorage.removeItem(
+"userLogin"
+);
+window.location.href="index.html";
+}
+
+// CHANGE HERO BUTTON AFTER LOGIN
+
+document.addEventListener("DOMContentLoaded",()=>{
+const heroBtn =
+document.querySelector(".hero-buttons");
+if(
+heroBtn &&
+localStorage.getItem("userLogin") === "true"
+){
+heroBtn.innerHTML = `
+<a href="dashboard.html" class="btn primary">
+ورود به داشبورد
+</a>
+`;
+}
+});
