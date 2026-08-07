@@ -1,0 +1,30 @@
+/* CSS EduPath Dashboard*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    font-family:"Vazirmatn",sans-serif;
+    background:#F6F8FC;
+    color:#334155;
+    overflow-x:hidden;
+}
+/* VARIABLES */
+:root{
+    --primary:#6D28D9;
+    --secondary:#EC4899;
+    --accent:#60A5FA;
+    --dark:#0F172A;
+    --text:#64748B;
+    --white:#ffffff;
+    --border:#E2E8F0;
+    --bg:#F6F8FC;
+    --success:#22C55E;
+    --warning:#F59E0B;
+    --danger:#EF4444;
+    --shadow:0 15px 40px rgba(15,23,42,.08);
+}
