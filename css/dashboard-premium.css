@@ -104,3 +104,32 @@ transform:translateY(-5px);
 
 
 
+/* WELCOME to PREMIUM*/
+.welcome{
+background:
+linear-gradient(
+135deg,
+#7C3AED,
+#EC4899,
+#38BDF8
+);
+box-shadow:0 30px 70px rgba(124,58,237,.35);
+}
+.welcome::after{
+content:"";
+position:absolute;
+width:350px;
+height:350px;
+background:white;
+opacity:.12;
+border-radius:50%;
+right:-120px;
+top:-120px;
+}
+.study-btn{
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+.study-btn:hover{
+box-shadow:0 20px 45px rgba(0,0,0,.25);
+}
+
