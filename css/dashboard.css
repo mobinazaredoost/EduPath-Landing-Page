@@ -426,3 +426,46 @@ body{
 .lesson p{
     color:#64748B;
 }
+/* ADVISOR*/
+.advisor-box{
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+}
+.advisor-box img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+}
+.advisor-box h4{
+    color:var(--dark);
+    margin-bottom:8px;
+}
+.advisor-box p{
+    color:#64748B;
+    line-height:2;
+}
+/* ACTIVITY*/
+.activity-list{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+.activity-list li{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:15px;
+    border-radius:15px;
+    background:#F8FAFC;
+    transition:.3s;
+}
+.activity-list li:hover{
+    background:#EEF2FF;
+}
+.activity-list i{
+    font-size:24px;
+    color:var(--primary);
+}
