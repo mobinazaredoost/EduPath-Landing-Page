@@ -146,3 +146,28 @@ cards.forEach(card=>{
     });
 });
 
+// FAKE NOTIFICATION
+const bell =
+document.querySelector(".bx-bell");
+if(bell){
+bell.addEventListener(
+"click",
+()=>{
+alert(
+"🔔 شما 3 پیام جدید از مشاور دارید"
+);
+});
+}
+
+//CLICK PROFILE 
+const profile =
+document.querySelector(".profile");
+if(profile){
+profile.addEventListener(
+"click",
+()=>{
+profile.classList.toggle(
+"profile-open"
+);
+});
+}
