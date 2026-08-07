@@ -33,3 +33,80 @@ counter.innerText=value;
 update();
 });
 
+// 
+const revealElements = document.querySelectorAll(
+".dashboard-card, .card, .welcome"
+);
+const revealOnScroll = ()=>{
+    revealElements.forEach(element=>{
+        const windowHeight =
+        window.innerHeight;
+        const elementTop =
+        element.getBoundingClientRect().top;
+        if(elementTop < windowHeight - 100){
+            element.classList.add("reveal-active");
+        }
+    });
+};
+window.addEventListener(
+"scroll",
+revealOnScroll
+);
+revealOnScroll();
+// NOTIFICATION ANIMATION 
+const notifications =
+document.querySelectorAll(".notification");
+notifications.forEach(notification=>{
+    setInterval(()=>{
+        notification.classList.toggle(
+        "shake"
+        );
+
+    },3000);
+});
+
+//  LIVE DATE
+function updateDate(){
+    const dateElement =
+    document.querySelector(".current-date");
+    if(dateElement){
+        const now = new Date();
+        dateElement.innerText =
+        now.toLocaleDateString(
+        "fa-IR",
+        {
+            weekday:"long",
+            year:"numeric",
+            month:"long",
+            day:"numeric"
+        });
+    }
+}
+updateDate();
+setInterval(
+updateDate,
+60000
+);
+
+//  START  STUDY BUTTON LOADING
+const studyButton =
+document.querySelector(".study-btn");
+if(studyButton){
+studyButton.addEventListener(
+"click",
+function(e){
+    e.preventDefault();
+    this.innerHTML =
+    `
+    <i class="fa-solid fa-spinner fa-spin"></i>
+    در حال آماده سازی...
+    `;
+    setTimeout(()=>{
+        this.innerHTML =
+        `
+        شروع مطالعه
+        `;
+    },2000);
+});
+}
+
