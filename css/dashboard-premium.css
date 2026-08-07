@@ -30,3 +30,47 @@ transparent 35%
 ),
 #F8FAFC;
 }
+/* SIDEBAR */
+.sidebar{
+background:linear-gradient(180deg,
+rgba(124,58,237,.95),
+rgba(91,33,182,.95)
+);
+backdrop-filter:blur(20px);
+border-left:1px solid rgba(255,255,255,.2);
+}
+.sidebar::after{
+content:"";
+position:absolute;
+width:220px;
+height:220px;
+background:rgba(255,255,255,.12);
+border-radius:50%;
+bottom:-80px;
+right:-80px;
+filter:blur(30px);
+}
+/* MENU */
+.menu li a{
+position:relative;
+overflow:hidden;
+}
+.menu li a::before{
+content:"";
+position:absolute;
+right:0;
+top:0;
+width:0;
+height:100%;
+background:rgba(255,255,255,.15);
+transition:.4s;
+}
+.menu li a:hover::before{
+width:100%;
+}
+.menu li a:hover{
+transform:translateX(-8px);
+}
+.menu .active a{
+box-shadow:0 10px 30px rgba(255,255,255,.25);
+}
