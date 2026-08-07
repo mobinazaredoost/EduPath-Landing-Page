@@ -133,3 +133,138 @@ box-shadow:0 15px 35px rgba(0,0,0,.15);
 box-shadow:0 20px 45px rgba(0,0,0,.25);
 }
 
+/*  CARDS */
+.card,
+.dashboard-card{
+background:var(--card);
+backdrop-filter:blur(20px);
+border:1px solid var(--border);
+box-shadow:var(--shadow-premium);
+}
+.card:hover,
+.dashboard-card:hover{
+transform:translateY(-12px);
+box-shadow:0 35px 80px rgba(124,58,237,.18);
+}
+/* ICON BOX */
+.card i{
+width:70px;
+height:70px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:22px;
+background:linear-gradient(
+135deg,
+rgba(124,58,237,.15),
+rgba(236,72,153,.15)
+);
+}
+/* FADE ANIMATION */
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:
+translateY(40px);
+}
+to{
+opacity:1;
+transform:
+translateY(0);
+}
+}
+.dashboard-card,
+.card,
+.welcome{
+animation:
+fadeUp .8s ease forwards;
+}
+/*FLOATING EFFECT */
+@keyframes floating{
+50%{
+transform:translateY(-8px);
+}
+}
+.profile img{
+animation:floating 4s infinite;
+}
+/* table */
+.table-card{
+    overflow:hidden;
+}
+.table-card table{
+    width:100%;
+    border-collapse:collapse;
+}
+.table-card thead{
+background:linear-gradient(
+135deg,
+rgba(124,58,237,.12),
+rgba(236,72,153,.12)
+);
+}
+.table-card th{
+padding:18px;
+text-align:right;
+font-size:14px;
+color:#475569;
+font-weight:800;
+}
+.table-card td{
+padding:18px;
+border-bottom:1px solid rgba(226,232,240,.7);
+color:#64748B;
+}
+.table-card tbody tr{
+transition:.35s;
+}
+.table-card tbody tr:hover{
+background:
+rgba(124,58,237,.06);
+transform:scale(1.01);
+}
+.table-card td:first-child{
+font-weight:700;
+color:var(--dark);
+}
+/* STATUS BADGES*/
+.status{
+padding:8px 18px;
+border-radius:50px;
+font-size:13px;
+font-weight:700;
+display:inline-flex;
+align-items:center;
+gap:6px;
+}
+.status::before{
+content:"";
+width:8px;
+height:8px;
+border-radius:50%;
+}
+.status.waiting{
+background:
+rgba(245,158,11,.15);
+color:#D97706;
+}
+.status.waiting::before{
+background:#F59E0B;
+}
+.status.ready{
+background:
+rgba(34,197,94,.15);
+color:#16A34A;
+}
+.status.ready::before{
+background:#22C55E;
+}
+.status.done{
+background:
+rgba(56,189,248,.15);
+color:#0284C7;
+}
+.status.done::before{
+background:#38BDF8;
+}
+
