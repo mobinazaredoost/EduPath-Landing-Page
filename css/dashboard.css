@@ -28,3 +28,162 @@ body{
     --danger:#EF4444;
     --shadow:0 15px 40px rgba(15,23,42,.08);
 }
+/*LAYOUT*/
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+
+
+/* SIDEBAR*/
+.sidebar{
+    width:270px;
+    background:
+    linear-gradient(180deg,#7C3AED,#5B21B6);
+    color:white;
+    padding:35px 25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    position:fixed;
+    top:0;
+    right:0;
+    height:100vh;
+    box-shadow:-10px 0 35px rgba(0,0,0,.08);
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:50px;
+}
+.logo i{
+    width:55px;
+    height:55px;
+    border-radius:18px;
+    background:white;
+    color:#7C3AED;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+}
+.logo h2{
+    font-size:28px;
+    font-weight:800;
+}
+
+
+
+/*MENU */
+.menu{
+    list-style:none;
+}
+.menu li{
+    margin-bottom:12px;
+}
+.menu li a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    color:white;
+    text-decoration:none;
+    padding:15px 18px;
+    border-radius:18px;
+    transition:.35s;
+}
+.menu li a i{
+    font-size:23px;
+}
+.menu li:hover a{
+    background:rgba(255,255,255,.15);
+    transform:translateX(-6px);
+}
+.menu .active a{
+    background:white;
+    color:#7C3AED;
+    font-weight:700;
+}
+.logout{
+    margin-top:40px;
+}
+
+
+
+/*MAIN */
+.main-content{
+    width:calc(100% - 270px);
+    margin-right:270px;
+    padding:35px;
+}
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.search-box{
+    width:360px;
+    height:55px;
+    background:white;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:0 20px;
+    box-shadow:var(--shadow);
+}
+.search-box i{
+    color:#94A3B8;
+    font-size:20px;
+}
+.search-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    font-family:inherit;
+    font-size:15px;
+}
+/* ACTIONS */
+.top-actions{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+.top-actions button{
+    width:55px;
+    height:55px;
+    border:none;
+    background:white;
+    border-radius:18px;
+    cursor:pointer;
+    position:relative;
+    transition:.35s;
+    box-shadow:var(--shadow);
+}
+.top-actions button:hover{
+    transform:translateY(-5px);
+}
+.top-actions button i{
+    font-size:24px;
+    color:#64748B;
+}
+/* Notification */
+.notification{
+    position:absolute;
+    top:8px;
+    left:8px;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#EF4444;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:11px;
+}
+
+
