@@ -74,3 +74,33 @@ transform:translateX(-8px);
 .menu .active a{
 box-shadow:0 10px 30px rgba(255,255,255,.25);
 }
+/* topbar */
+.topbar{
+background:rgba(255,255,255,.35);
+backdrop-filter:blur(15px);
+padding:15px 20px;
+border-radius:25px;
+}
+/* SEARCH */
+.search-box{
+background:rgba(255,255,255,.8);
+border:1px solid rgba(255,255,255,.5);
+transition:.35s;
+}
+.search-box:focus-within{
+transform:translateY(-4px);
+box-shadow:0 15px 35px rgba(124,58,237,.15);
+}
+/* PROFILE */
+.profile{
+background:
+rgba(255,255,255,.75);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.5);
+}
+.profile:hover{
+transform:translateY(-5px);
+}
+
+
+
