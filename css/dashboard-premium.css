@@ -1,0 +1,32 @@
+/*EduPath Premium Dashboard Version 2 */
+:root{
+    --primary:#7C3AED;
+    --primary-light:#A78BFA;
+    --pink:#EC4899;
+    --blue:#38BDF8;
+    --background:#F8FAFC;
+    --card:rgba(255,255,255,.72);
+    --dark:#0F172A;
+    --text:#64748B;
+    --border:rgba(255,255,255,.5);
+    --glass:blur(20px);
+    --shadow-premium:0 25px 60px rgba(15,23,42,.12);
+    --gradient:linear-gradient(135deg,
+    #7C3AED,
+    #EC4899
+    );
+}
+/* BODY PREMIUM*/
+body{
+background:radial-gradient(
+circle at top right,
+rgba(124,58,237,.15),
+transparent 30%
+),
+radial-gradient(
+circle at bottom left,
+rgba(56,189,248,.15),
+transparent 35%
+),
+#F8FAFC;
+}
